@@ -9,6 +9,10 @@ android {
     namespace = "${Configuration.NAMESPACE}.presentation"
     compileSdk = Configuration.COMPILE_SDK
 
+    defaultConfig {
+        minSdk = Configuration.MINIMUM_SDK
+    }
+
     compileOptions {
         sourceCompatibility = Versions.Build.JAVA_VERSION
         targetCompatibility = Versions.Build.JAVA_VERSION
@@ -39,6 +43,7 @@ android {
 
 dependencies {
     implementation(project(Modules.DOMAIN))
+    implementation(Libraries.Coil)
     implementation(Libraries.AndroidX.Core)
     implementation(Libraries.AndroidX.Lifecycle)
     implementation(Libraries.Compose.Activity)

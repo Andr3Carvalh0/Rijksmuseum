@@ -1,0 +1,6 @@
+<resources>
+    <string name="app_name">Rijksmuseum</string>
+
+    <string name="error_screen_title">😭</string>
+    <string name="error_screen_subtitle">Something went wrong…</string>
+</resources>

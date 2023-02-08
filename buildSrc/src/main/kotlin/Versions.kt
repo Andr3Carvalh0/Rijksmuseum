@@ -22,6 +22,8 @@ object Versions {
         const val KOTLIN_JVM = "1.8.0"
     }
 
+    const val COIL = "2.2.2"
+
     object Compose {
         const val HILT = "1.0.0"
         const val BOM = "2022.10.00"
@@ -40,7 +42,11 @@ object Versions {
         const val MAIN = "4.13.2"
     }
 
-    const val MOSHI = "1.14.0"
+    object Kotlin {
+        const val COROUTINES = "1.6.4"
+    }
 
+    const val MOSHI = "1.14.0"
     const val RETROFIT = "2.9.0"
+    const val HTTP_LOGGING = "4.10.0"
 }

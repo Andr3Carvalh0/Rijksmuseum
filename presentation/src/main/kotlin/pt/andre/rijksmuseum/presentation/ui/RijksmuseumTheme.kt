@@ -1,7 +1,6 @@
 package pt.andre.rijksmuseum.presentation.ui
 
 import android.app.Activity
-import androidx.compose.foundation.isSystemInDarkTheme
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.lightColorScheme
 import androidx.compose.runtime.Composable
@@ -14,12 +13,14 @@ import pt.andre.rijksmuseum.presentation.R
 
 @Composable
 internal fun RijksmuseumTheme(
-    darkTheme: Boolean = isSystemInDarkTheme(),
     content: @Composable () -> Unit
 ) {
     val colorScheme = lightColorScheme(
         primary = colorResource(id = R.color.rijksmuseum_red),
-        secondary = colorResource(id = R.color.rijksmuseum_red)
+        secondary = colorResource(id = R.color.rijksmuseum_red),
+        surface = colorResource(id = R.color.white),
+        primaryContainer = colorResource(id = R.color.rijksmuseum_blue),
+        onPrimaryContainer = colorResource(id = R.color.white)
     )
 
     val view = LocalView.current
@@ -28,7 +29,8 @@ internal fun RijksmuseumTheme(
         SideEffect {
             val window = (view.context as Activity).window
             window.statusBarColor = colorScheme.primary.toArgb()
-            WindowCompat.getInsetsController(window, view).isAppearanceLightStatusBars = darkTheme
+            window.navigationBarColor = colorScheme.surface.toArgb()
+            WindowCompat.getInsetsController(window, view).isAppearanceLightStatusBars = false
         }
     }
 

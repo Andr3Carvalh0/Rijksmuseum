@@ -1,9 +1,9 @@
 package pt.andre.rijksmuseum.presentation.details
 
 import androidx.compose.runtime.Composable
-import androidx.lifecycle.viewmodel.compose.viewModel
+import androidx.hilt.navigation.compose.hiltViewModel
 
 @Composable
 internal fun DetailsScreen(
-    vm: DetailsViewModel = viewModel()
+    vm: DetailsViewModel = hiltViewModel()
 ) { }

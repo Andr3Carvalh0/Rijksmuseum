@@ -10,6 +10,8 @@ object Libraries {
         }
     }
 
+    const val Coil = "io.coil-kt:coil-compose:${Versions.COIL}"
+
     object Compose {
         const val Activity = "androidx.activity:activity-compose:${Versions.AndroidX.ACTIVITY}"
         const val BOM = "androidx.compose:compose-bom:${Versions.Compose.BOM}"
@@ -42,9 +44,17 @@ object Libraries {
 
     const val JUnit = "junit:junit:${Versions.JUnit.MAIN}"
 
+    object Kotlin {
+        const val Coroutines = "org.jetbrains.kotlinx:kotlinx-coroutines-core:${Versions.Kotlin.COROUTINES}"
+    }
+
     object Moshi {
         const val Core = "com.squareup.moshi:moshi-kotlin:${Versions.MOSHI}"
         const val Adapters = "com.squareup.moshi:moshi-adapters:${Versions.MOSHI}"
+    }
+
+    object OKHttp {
+        const val Logging = "com.squareup.okhttp3:logging-interceptor:${Versions.HTTP_LOGGING}"
     }
 
     object Retrofit {

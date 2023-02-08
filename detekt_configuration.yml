@@ -3,6 +3,7 @@ formatting:
   NoUnusedImports:
     active: true
     autoCorrect: true
+    ignoreAnnotated: [ 'Composable' ]
   NoWildcardImports:
     active: true
   Indentation:
@@ -52,6 +53,8 @@ style:
     max: 3
   UnnecessaryAbstractClass:
     ignoreAnnotated: [ 'Module' ]
+  UnusedPrivateMember:
+    ignoreAnnotated: [ 'Composable' ]
   MaxLineLength:
     active: true
     maxLineLength: 150
