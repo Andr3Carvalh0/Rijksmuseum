@@ -23,9 +23,14 @@ object Versions {
     }
 
     object Compose {
+        const val HILT = "1.0.0"
         const val BOM = "2022.10.00"
         const val BUILD = "1.4.0"
+        const val LIFECYCLE = "2.5.1"
+        const val NAVIGATION = "2.5.3"
     }
+
+    const val HILT = "2.44"
 
     object Detekt {
         const val DETEKT = "1.19.0"
@@ -34,4 +39,8 @@ object Versions {
     object JUnit {
         const val MAIN = "4.13.2"
     }
+
+    const val MOSHI = "1.14.0"
+
+    const val RETROFIT = "2.9.0"
 }

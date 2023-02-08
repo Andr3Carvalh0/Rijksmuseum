@@ -4,6 +4,7 @@ plugins {
     id("org.jetbrains.kotlin.android") version Versions.Build.KOTLIN_GRADLE apply false
     id("org.jetbrains.kotlin.jvm") version Versions.Build.KOTLIN_JVM apply false
     id("io.gitlab.arturbosch.detekt") version Versions.Detekt.DETEKT
+    id("com.google.dagger.hilt.android") version Versions.HILT apply false
 }
 
 tasks.withType<io.gitlab.arturbosch.detekt.Detekt> { jvmTarget = Versions.Build.JVM_TARGET }
@@ -15,7 +16,7 @@ detekt {
 }
 
 dependencies {
-    detektPlugins(Libraries.Detekt.FORMATTING)
+    detektPlugins(Libraries.Detekt.Formatting)
 }
 
 fun getAllSrcDirs(): List<File> {

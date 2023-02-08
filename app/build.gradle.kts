@@ -1,11 +1,13 @@
 plugins {
     id("com.android.application")
     id("org.jetbrains.kotlin.android")
+    kotlin("kapt")
+    id("com.google.dagger.hilt.android")
 }
 
 android {
     namespace = Configuration.NAMESPACE
-    compileSdk = Configuration.TARGET_SDK
+    compileSdk = Configuration.COMPILE_SDK
 
     defaultConfig {
         applicationId = Configuration.NAMESPACE
@@ -48,8 +50,15 @@ android {
     kotlinOptions {
         jvmTarget = Versions.Build.JVM_TARGET
     }
+
+    kapt {
+        correctErrorTypes = true
+    }
 }
 
 dependencies {
     implementation(project(Modules.PRESENTATION))
+    implementation(Libraries.Hilt.Core)
+
+    kapt(Libraries.Hilt.Compiler)
 }

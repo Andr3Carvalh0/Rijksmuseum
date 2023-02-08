@@ -1,11 +1,13 @@
 plugins {
     id("com.android.library")
     id("org.jetbrains.kotlin.android")
+    kotlin("kapt")
+    id("com.google.dagger.hilt.android")
 }
 
 android {
     namespace = "${Configuration.NAMESPACE}.presentation"
-    compileSdk = Configuration.TARGET_SDK
+    compileSdk = Configuration.COMPILE_SDK
 
     compileOptions {
         sourceCompatibility = Versions.Build.JAVA_VERSION
@@ -29,11 +31,14 @@ android {
             resources.excludes.add("/META-INF/{AL2.0,LGPL2.1}")
         }
     }
+
+    kapt {
+        correctErrorTypes = true
+    }
 }
 
 dependencies {
     implementation(project(Modules.DOMAIN))
-
     implementation(Libraries.AndroidX.Core)
     implementation(Libraries.AndroidX.Lifecycle)
     implementation(Libraries.Compose.Activity)
@@ -42,6 +47,12 @@ dependencies {
     implementation(Libraries.Compose.Graphics)
     implementation(Libraries.Compose.Preview)
     implementation(Libraries.Compose.Material3)
+    implementation(Libraries.Compose.Navigation.Core)
+    implementation(Libraries.Compose.Lifecycle)
+    implementation(Libraries.Hilt.Core)
+    implementation(Libraries.Hilt.Navigation)
+
+    kapt(Libraries.Hilt.Compiler)
 
     debugImplementation(Libraries.Compose.Tooling)
     debugImplementation(Libraries.Compose.Test.Manifest)
