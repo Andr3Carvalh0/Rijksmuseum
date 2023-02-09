@@ -42,6 +42,12 @@ android {
 }
 
 dependencies {
+    implementation(project(Modules.DATA)) {
+        because(
+            "By depending on it, its included in the dependency graph and " +
+                "hilt will generate our binds/etc for the data module"
+        )
+    }
     implementation(project(Modules.DOMAIN))
     implementation(Libraries.Coil)
     implementation(Libraries.AndroidX.Core)

@@ -22,9 +22,7 @@ internal fun RijksmuseumNavigation() {
             arguments = Overview.arguments
         ) {
             OverviewScreen(
-                onItemClick = { id ->
-                    controller.navigate(Details.create(id))
-                }
+                onItemClick = { id -> controller.navigate(Details.create(id)) }
             )
         }
 

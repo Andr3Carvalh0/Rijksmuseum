@@ -23,7 +23,8 @@ internal class DefaultCollectionRepository @Inject constructor(
                 CollectionItem(
                     id = it.objectNumber,
                     text = it.title,
-                    imageUrl = it.webImage?.url ?: ""
+                    author = it.principalOrFirstMaker,
+                    imageUrl = it.webImage.url
                 )
             }
         }.run {
@@ -35,12 +36,12 @@ internal class DefaultCollectionRepository @Inject constructor(
         remoteDataSource.details(id)
             .mapSuccess { response ->
                 CollectionDetailsItem(
-                    id = response.objectNumber,
-                    title = response.title,
-                    description = response.description,
-                    author = response.principalOrFirstMaker,
-                    year = response.dating.presentingDate,
-                    image = response.webImage?.url ?: ""
+                    id = response.artObject.objectNumber,
+                    title = response.artObject.title,
+                    description = response.artObject.description,
+                    author = response.artObject.principalOrFirstMaker,
+                    year = response.artObject.dating?.presentingDate,
+                    image = response.artObject.webImage.url
                 )
             }.run {
                 emit(this)

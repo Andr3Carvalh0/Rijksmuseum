@@ -1,6 +1,6 @@
 package pt.andre.rijksmuseum.data.mapper
 
-import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.CoroutineDispatcher
 import kotlinx.coroutines.withContext
 import pt.andre.rijksmuseum.domain.exceptions.AuthenticationException
 import pt.andre.rijksmuseum.domain.exceptions.EmptyResponseException
@@ -10,8 +10,9 @@ import retrofit2.Response
 
 @Suppress("TooGenericExceptionCaught")
 internal suspend inline fun <reified T> mapResult(
-    crossinline networkCall: suspend () -> Response<T>
-): Result<T> = withContext(Dispatchers.IO) {
+    crossinline networkCall: suspend () -> Response<T>,
+    dispatcher: CoroutineDispatcher
+): Result<T> = withContext(dispatcher) {
     try {
         networkCall().mapResult()
     } catch (e: Exception) {

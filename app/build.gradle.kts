@@ -57,8 +57,6 @@ android {
 }
 
 dependencies {
-    implementation(project(Modules.DATA))
-    implementation(project(Modules.DOMAIN))
     implementation(project(Modules.PRESENTATION))
     implementation(Libraries.Hilt.Core)
 

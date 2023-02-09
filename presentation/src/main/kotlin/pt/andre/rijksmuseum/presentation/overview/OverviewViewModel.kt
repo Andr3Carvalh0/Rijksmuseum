@@ -6,17 +6,14 @@ import androidx.compose.runtime.mutableStateOf
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import dagger.hilt.android.lifecycle.HiltViewModel
-import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
-import pt.andre.rijksmuseum.domain.collection.CollectionRepository
-import pt.andre.rijksmuseum.domain.utilities.Result
-import pt.andre.rijksmuseum.presentation.overview.model.CollectionViewItem
 import pt.andre.rijksmuseum.presentation.overview.model.OverviewViewState
+import pt.andre.rijksmuseum.presentation.overview.pagination.GetOverviewItemsUseCase
 import javax.inject.Inject
 
 @HiltViewModel
 internal class OverviewViewModel @Inject constructor(
-    private val repository: CollectionRepository
+    private val getOverviewItemsUseCase: GetOverviewItemsUseCase
 ) : ViewModel() {
     val state: State<OverviewViewState>
         get() = _state
@@ -24,32 +21,18 @@ internal class OverviewViewModel @Inject constructor(
     private val _state: MutableState<OverviewViewState> =
         mutableStateOf(OverviewViewState.Loading)
 
-    init {
-        initialize()
-    }
+    init { initialize() }
 
     fun initialize() {
-        viewModelScope.launch(Dispatchers.IO) {
-            repository.items(
-                0, 10
-            ).collect { result ->
-                _state.value = when (result) {
-                    is Result.Success -> OverviewViewState.Success(
-                        items = listOf(
-                            CollectionViewItem.Header("Ola")
-                        ) + result.value.map {
-                            CollectionViewItem.Item(
-                                id = it.id,
-                                text = it.text,
-                                imageUrl = it.imageUrl
-                            )
-                        },
-                        isLoadingNextPage = false
-                    )
-                    is Result.Failure -> OverviewViewState.Error
-                    is Result.Loading -> OverviewViewState.Loading
-                }
-            }
+        viewModelScope.launch {
+            getOverviewItemsUseCase.initialize()
+                .collect { result -> _state.value = result }
+        }
+    }
+
+    fun onItemVisible(index: Int) {
+        viewModelScope.launch {
+            getOverviewItemsUseCase.onItemVisible(index)
         }
     }
 }

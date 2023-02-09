@@ -3,4 +3,6 @@
 
     <string name="error_screen_title">😭</string>
     <string name="error_screen_subtitle">Something went wrong…</string>
+    <string name="loading_more">Loading…</string>
+    <string name="unknown">Unknown</string>
 </resources>

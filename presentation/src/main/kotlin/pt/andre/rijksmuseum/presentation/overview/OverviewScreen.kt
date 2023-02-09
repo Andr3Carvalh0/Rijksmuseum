@@ -3,12 +3,15 @@ package pt.andre.rijksmuseum.presentation.overview
 
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxSize
+import androidx.compose.foundation.lazy.rememberLazyListState
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Text
 import androidx.compose.material3.TopAppBar
 import androidx.compose.material3.TopAppBarDefaults
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.LaunchedEffect
+import androidx.compose.runtime.snapshotFlow
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontWeight
@@ -38,17 +41,27 @@ internal fun OverviewScreen(
             )
         )
 
+        val listState = rememberLazyListState()
+
+        LaunchedEffect(listState) {
+            snapshotFlow { listState.firstVisibleItemIndex }
+                .collect { index -> vm.onItemVisible(index) }
+        }
+
         when (val uiState = vm.state.value) {
             is OverviewViewState.Loading -> Loading(
                 modifier = Modifier.fillMaxSize()
             )
             is OverviewViewState.Error -> Error(
-                modifier = Modifier.fillMaxSize(),
+                modifier = Modifier,
                 onRetryClick = vm::initialize
             )
             is OverviewViewState.Success -> OverviewItemList(
                 modifier = Modifier.fillMaxSize(),
-                items = uiState.items
+                listState = listState,
+                onItemClick = onItemClick,
+                items = uiState.items,
+                isLoadingMore = uiState.isLoadingNextPage
             )
         }
     }
