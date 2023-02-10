@@ -67,7 +67,7 @@ object Libraries {
         const val Moshi = "com.squareup.retrofit2:converter-moshi:${Versions.RETROFIT}"
     }
 
-    const val Mockito = "org.mockito.kotlin:mockito-kotlin:${Versions.MOCKITO}"
+    const val Mockk = "io.mockk:mockk:${Versions.MOCKK}"
 
     const val Turbine = "app.cash.turbine:turbine:${Versions.TURBINE}"
 }

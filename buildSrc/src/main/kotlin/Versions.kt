@@ -50,7 +50,7 @@ object Versions {
     const val RETROFIT = "2.9.0"
     const val OKHTTP = "4.10.0"
 
-    const val MOCKITO = "4.1.0"
+    const val MOCKK = "1.13.4"
 
     const val TURBINE = "0.12.1"
 }

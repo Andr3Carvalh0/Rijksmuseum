@@ -6,6 +6,8 @@ import pt.andre.rijksmuseum.domain.exceptions.AuthenticationException
 import pt.andre.rijksmuseum.domain.exceptions.EmptyResponseException
 import pt.andre.rijksmuseum.domain.exceptions.ServerException
 import pt.andre.rijksmuseum.domain.utilities.Result
+import pt.andre.rijksmuseum.domain.utilities.asFailure
+import pt.andre.rijksmuseum.domain.utilities.asSuccess
 import retrofit2.Response
 
 @Suppress("TooGenericExceptionCaught")
@@ -16,16 +18,16 @@ internal suspend inline fun <reified T> mapResult(
     try {
         networkCall().mapResult()
     } catch (e: Exception) {
-        Result.Failure(e)
+        e.asFailure()
     }
 }
 
 internal fun <T> Response<T>.mapResult(): Result<T> {
     return when {
         isSuccessful -> {
-            body()?.let { Result.Success(it) } ?: Result.Failure(EmptyResponseException())
+            body()?.asSuccess() ?: EmptyResponseException().asFailure()
         }
-        else -> Result.Failure(code().toException())
+        else -> code().toException().asFailure()
     }
 }
 

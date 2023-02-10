@@ -55,7 +55,7 @@ dependencies {
 
     testImplementation(Libraries.JUnit)
     testImplementation(Libraries.Kotlin.Test.Coroutines)
-    testImplementation(Libraries.Mockito)
+    testImplementation(Libraries.Mockk)
     testImplementation(Libraries.OKHttp.MockServer)
     testImplementation(Libraries.Turbine)
 }
