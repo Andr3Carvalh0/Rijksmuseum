@@ -53,7 +53,7 @@ internal class GetOverviewItemsUseCase @Inject constructor(
 
     private suspend fun fetchItems(offset: Int) {
         val previousItems = (state.value as? OverviewViewState.Success)?.items
-        val isInitialRequest = previousItems?.isEmpty() == true
+        val isInitialRequest = previousItems == null
 
         setState(
             isInitialPage = isInitialRequest,
