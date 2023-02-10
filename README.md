@@ -27,3 +27,4 @@ There are still some nice to haves in this project like:
 - [ ] Implement a caching layer (either in memory or persistent), to allow the usage of the app while offline/avoid redoing calls.
 - [ ] Right now, if we end up reaching the end of the pagination, and we become aware of that fact, we dont store it anywhere, so there is a chance we might be repeating requests when not needed(since there is no more items).
 - [ ] Some UI love ❤️.
+- [ ] Better communication of the errors to the user. Right now we are passing different kinds of errors between the layers, but in the end(presentation layer) we just show a generic error message.
