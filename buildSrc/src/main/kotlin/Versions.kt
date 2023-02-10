@@ -6,11 +6,6 @@ object Versions {
         const val ACTIVITY = "1.5.1"
         const val CORE = "1.8.0"
         const val LIFECYCLE = "2.3.1"
-
-        object Test {
-            const val ESPRESSO = "3.4.0"
-            const val JUNIT = "1.1.3"
-        }
     }
 
     object Build {

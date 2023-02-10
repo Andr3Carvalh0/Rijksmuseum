@@ -7,8 +7,10 @@ import androidx.lifecycle.SavedStateHandle
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import dagger.hilt.android.lifecycle.HiltViewModel
+import kotlinx.coroutines.CoroutineDispatcher
 import kotlinx.coroutines.launch
 import pt.andre.rijksmuseum.domain.collection.CollectionRepository
+import pt.andre.rijksmuseum.domain.utilities.IODispatcher
 import pt.andre.rijksmuseum.domain.utilities.Result
 import pt.andre.rijksmuseum.presentation.details.mapper.toViewItem
 import pt.andre.rijksmuseum.presentation.details.model.DetailsViewState
@@ -17,7 +19,8 @@ import javax.inject.Inject
 @HiltViewModel
 internal class DetailsViewModel @Inject constructor(
     private val repository: CollectionRepository,
-    private val savedStateHandle: SavedStateHandle
+    private val savedStateHandle: SavedStateHandle,
+    @IODispatcher private val dispatcher: CoroutineDispatcher
 ) : ViewModel() {
 
     val state: State<DetailsViewState>
@@ -37,7 +40,7 @@ internal class DetailsViewModel @Inject constructor(
     fun initialize() {
         _state.value = DetailsViewState.Loading
 
-        viewModelScope.launch {
+        viewModelScope.launch(dispatcher) {
             repository.details(itemId)
                 .collect { result ->
                     _state.value = when (result) {

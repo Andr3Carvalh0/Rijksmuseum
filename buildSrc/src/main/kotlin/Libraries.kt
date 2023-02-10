@@ -3,11 +3,6 @@ object Libraries {
     object AndroidX {
         const val Core = "androidx.core:core-ktx:${Versions.AndroidX.CORE}"
         const val Lifecycle = "androidx.lifecycle:lifecycle-runtime-ktx:${Versions.AndroidX.LIFECYCLE}"
-
-        object Test {
-            const val JUnit = "androidx.test.ext:junit:${Versions.AndroidX.Test.JUNIT}"
-            const val Espresso = "androidx.test.espresso:espresso-core:${Versions.AndroidX.Test.ESPRESSO}"
-        }
     }
 
     const val Coil = "io.coil-kt:coil-compose:${Versions.COIL}"
@@ -28,7 +23,6 @@ object Libraries {
 
         object Test {
             const val Manifest = "androidx.compose.ui:ui-test-manifest"
-            const val JUnit4 = "androidx.compose.ui:ui-test-junit4"
         }
     }
 

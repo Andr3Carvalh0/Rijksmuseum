@@ -69,9 +69,7 @@ dependencies {
     debugImplementation(Libraries.Compose.Test.Manifest)
 
     testImplementation(Libraries.JUnit)
-
-    androidTestImplementation(Libraries.AndroidX.Test.JUnit)
-    androidTestImplementation(Libraries.AndroidX.Test.Espresso)
-    androidTestImplementation(platform(Libraries.Compose.BOM))
-    androidTestImplementation(Libraries.Compose.Test.JUnit4)
+    testImplementation(Libraries.Kotlin.Test.Coroutines)
+    testImplementation(Libraries.Mockk)
+    testImplementation(Libraries.Turbine)
 }
