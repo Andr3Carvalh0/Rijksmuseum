@@ -46,6 +46,10 @@ object Libraries {
 
     object Kotlin {
         const val Coroutines = "org.jetbrains.kotlinx:kotlinx-coroutines-core:${Versions.Kotlin.COROUTINES}"
+
+        object Test {
+            const val Coroutines = "org.jetbrains.kotlinx:kotlinx-coroutines-test:${Versions.Kotlin.COROUTINES}"
+        }
     }
 
     object Moshi {
@@ -54,11 +58,16 @@ object Libraries {
     }
 
     object OKHttp {
-        const val Logging = "com.squareup.okhttp3:logging-interceptor:${Versions.HTTP_LOGGING}"
+        const val Logging = "com.squareup.okhttp3:logging-interceptor:${Versions.OKHTTP}"
+        const val MockServer = "com.squareup.okhttp3:mockwebserver:${Versions.OKHTTP}"
     }
 
     object Retrofit {
         const val Core = "com.squareup.retrofit2:retrofit:${Versions.RETROFIT}"
         const val Moshi = "com.squareup.retrofit2:converter-moshi:${Versions.RETROFIT}"
     }
+
+    const val Mockito = "org.mockito.kotlin:mockito-kotlin:${Versions.MOCKITO}"
+
+    const val Turbine = "app.cash.turbine:turbine:${Versions.TURBINE}"
 }

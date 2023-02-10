@@ -5,7 +5,7 @@ import okhttp3.Response
 import pt.andre.rijksmuseum.data.network.ApiKey
 import javax.inject.Inject
 
-private const val AUTHENTICATION_PARAM = "key"
+internal const val AUTHENTICATION_PARAM = "key"
 
 internal class AuthenticationInterceptor @Inject constructor(
     @ApiKey private val key: String

@@ -54,4 +54,8 @@ dependencies {
     kapt(Libraries.Hilt.Compiler)
 
     testImplementation(Libraries.JUnit)
+    testImplementation(Libraries.Kotlin.Test.Coroutines)
+    testImplementation(Libraries.Mockito)
+    testImplementation(Libraries.OKHttp.MockServer)
+    testImplementation(Libraries.Turbine)
 }
