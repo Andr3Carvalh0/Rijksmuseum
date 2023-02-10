@@ -1,0 +1,330 @@
+{
+  "elapsedMilliseconds":404,
+  "artObject":{
+    "links":{
+      "search":"http://www.rijksmuseum.nl/api/nl/collection"
+    },
+    "id":"nl-NG-MC-1023",
+    "priref":"244838",
+    "objectNumber":"NG-MC-1023",
+    "language":"nl",
+    "title":"Model van een waterruiter",
+    "copyrightHolder":null,
+    "webImage":{
+      "guid":"7725ae86-826d-419f-b748-5b73827d2297",
+      "offsetPercentageX":50,
+      "offsetPercentageY":50,
+      "width":2500,
+      "height":1978,
+      "url":"https://lh4.ggpht.com/1Dr0Q0HJd_8COtSKmQ0JiW4rAX77YR8jsP0JeRxorwu3oumCUTYMsxBSPqfgaRWjlO9uJt3Ufi1Vfz5yY1nGrHBwaGA=s0"
+    },
+    "colors":[
+      {
+        "percentage":88,
+        "hex":"#C6C6C6"
+      },
+      {
+        "percentage":3,
+        "hex":" #897A68"
+      },
+      {
+        "percentage":3,
+        "hex":" #594A3A"
+      },
+      {
+        "percentage":2,
+        "hex":" #E4E5E6"
+      },
+      {
+        "percentage":1,
+        "hex":" #B3A087"
+      },
+      {
+        "percentage":0,
+        "hex":" #241A12"
+      },
+      {
+        "percentage":0,
+        "hex":" #D7B993"
+      }
+    ],
+    "colorsWithNormalization":[
+      {
+        "originalHex":"#C6C6C6",
+        "normalizedHex":"#B5BFCC"
+      },
+      {
+        "originalHex":" #897A68",
+        "normalizedHex":"#737C84"
+      },
+      {
+        "originalHex":" #594A3A",
+        "normalizedHex":"#737C84"
+      },
+      {
+        "originalHex":" #E4E5E6",
+        "normalizedHex":"#F6ECF3"
+      },
+      {
+        "originalHex":" #B3A087",
+        "normalizedHex":"#E0CC91"
+      },
+      {
+        "originalHex":" #241A12",
+        "normalizedHex":"#000000"
+      },
+      {
+        "originalHex":" #D7B993",
+        "normalizedHex":"#E0CC91"
+      }
+    ],
+    "normalizedColors":[
+      {
+        "percentage":88,
+        "hex":"#C0C0C0"
+      },
+      {
+        "percentage":3,
+        "hex":" #808080"
+      },
+      {
+        "percentage":3,
+        "hex":" #696969"
+      },
+      {
+        "percentage":2,
+        "hex":" #DCDCDC"
+      },
+      {
+        "percentage":1,
+        "hex":" #D2B48C"
+      },
+      {
+        "percentage":0,
+        "hex":" #000000"
+      }
+    ],
+    "normalized32Colors":[
+      {
+        "percentage":88,
+        "hex":"#B5BFCC"
+      },
+      {
+        "percentage":6,
+        "hex":" #737C84"
+      },
+      {
+        "percentage":2,
+        "hex":" #F6ECF3"
+      },
+      {
+        "percentage":1,
+        "hex":" #E0CC91"
+      },
+      {
+        "percentage":0,
+        "hex":" #000000"
+      }
+    ],
+    "titles":[
+      "Model van een waterruiter"
+    ],
+    "description":"Model van een waterpalissade of waterruiter. Het is een dakvormig raamwerk met twee rijen scherpe punten bovenaan, in één richting wijzend. Aan de ene kant heeft het gewone ankers, aan de ander dreggen.",
+    "labelText":null,
+    "objectTypes":[
+      "schaalmodel",
+      "demonstratiemodel"
+    ],
+    "objectCollection":[
+      "Marinemodellenkamer"
+    ],
+    "makers":[
+      {
+        "name":"Jochem Pietersz. Asmus",
+        "unFixedName":"Asmus, Jochem Pietersz.",
+        "placeOfBirth":"Vlissingen",
+        "dateOfBirth":"1755-03-09",
+        "dateOfBirthPrecision":null,
+        "dateOfDeath":"1837-03-23",
+        "dateOfDeathPrecision":null,
+        "placeOfDeath":"Den Haag",
+        "occupation":[
+          "equipagemeester",
+          "constructeur",
+          "directeur"
+        ],
+        "roles":[
+          "naar ontwerp van"
+        ],
+        "nationality":"Noord-Nederlands",
+        "biography":null,
+        "productionPlaces":[
+          "Amsterdam"
+        ],
+        "qualification":null,
+        "labelDesc":"Jochem Pietersz. Asmus (09-mrt-1755 - 23-mrt-1837), Amsterdam"
+      }
+    ],
+    "principalMakers":[
+      {
+        "name":"'s Lands Werf Amsterdam",
+        "unFixedName":"'s Lands Werf Amsterdam",
+        "placeOfBirth":null,
+        "dateOfBirth":null,
+        "dateOfBirthPrecision":null,
+        "dateOfDeath":null,
+        "dateOfDeathPrecision":null,
+        "placeOfDeath":null,
+        "occupation":[
+
+        ],
+        "roles":[
+          "modelmaker"
+        ],
+        "nationality":null,
+        "biography":null,
+        "productionPlaces":[
+          "Amsterdam"
+        ],
+        "qualification":null,
+        "labelDesc":"'s Lands Werf Amsterdam, Amsterdam"
+      }
+    ],
+    "plaqueDescriptionDutch":null,
+    "plaqueDescriptionEnglish":null,
+    "principalMaker":"'s Lands Werf Amsterdam",
+    "artistRole":null,
+    "associations":[
+
+    ],
+    "acquisition":{
+      "method":"overdracht van beheer",
+      "date":"1883-01-01T00:00:00",
+      "creditLine":null
+    },
+    "exhibitions":[
+
+    ],
+    "materials":[
+      "hout",
+      "messing",
+      "lood"
+    ],
+    "techniques":[
+
+    ],
+    "productionPlaces":[
+      "Amsterdam",
+      "Amsterdam"
+    ],
+    "dating":{
+      "presentingDate":"1800",
+      "sortingDate":1800,
+      "period":18,
+      "yearEarly":1800,
+      "yearLate":1800
+    },
+    "classification":{
+      "iconClassIdentifier":[
+
+      ],
+      "iconClassDescription":[
+
+      ],
+      "motifs":[
+
+      ],
+      "events":[
+
+      ],
+      "periods":[
+
+      ],
+      "places":[
+
+      ],
+      "people":[
+
+      ],
+      "objectNumbers":[
+        "NG-MC-1023"
+      ]
+    },
+    "hasImage":true,
+    "historicalPersons":[
+
+    ],
+    "inscriptions":[
+
+    ],
+    "documentation":[
+      "A. Lemmers, 'De kunstklip van Aeneae (1800) en de leugen van Asmus', Tijdschrift voor zeegeschiedenis (1993) nr. 2, p. 111-127.",
+      "J.P. Asmus, Verzameling der verhandelingen over de defencie der zeegaten..., 1800 [Nederlands Scheepvaartmuseum, Amsterdam B216]."
+    ],
+    "catRefRPK":[
+
+    ],
+    "principalOrFirstMaker":"'s Lands Werf Amsterdam",
+    "dimensions":[
+      {
+        "unit":"cm",
+        "type":"hoogte",
+        "precision":null,
+        "part":null,
+        "value":"9,5"
+      },
+      {
+        "unit":"cm",
+        "type":"breedte",
+        "precision":null,
+        "part":null,
+        "value":"36"
+      },
+      {
+        "unit":"cm",
+        "type":"diepte",
+        "precision":null,
+        "part":null,
+        "value":"33,5"
+      }
+    ],
+    "physicalProperties":[
+
+    ],
+    "physicalMedium":"hout, messing en lood",
+    "longTitle":"Model van een waterruiter, 's Lands Werf Amsterdam, 1800",
+    "subTitle":"h 9,5cm × b 36cm × d 33,5cm",
+    "scLabelLine":"'s Lands Werf Amsterdam, 1800, hout, messing en lood",
+    "label":{
+      "title":null,
+      "makerLine":null,
+      "description":null,
+      "notes":null,
+      "date":null
+    },
+    "showImage":true,
+    "location":"HG-0.13"
+  },
+  "artObjectPage":{
+    "id":"nl-NG-MC-1023",
+    "similarPages":[
+
+    ],
+    "lang":"nl",
+    "objectNumber":"NG-MC-1023",
+    "tags":[
+
+    ],
+    "plaqueDescription":null,
+    "audioFile1":null,
+    "audioFileLabel1":null,
+    "audioFileLabel2":null,
+    "createdOn":"0001-01-01T00:00:00",
+    "updatedOn":"0001-01-01T00:00:00",
+    "adlibOverrides":{
+      "titel":null,
+      "maker":null,
+      "etiketText":null
+    }
+  }
+}
