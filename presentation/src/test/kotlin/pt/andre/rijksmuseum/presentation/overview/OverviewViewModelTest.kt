@@ -71,11 +71,11 @@ internal class OverviewViewModelTest {
 
         coVerify { overviewItemsUseCase.onItemVisible(index) }
     }
-
-    private fun item(): CollectionItem = CollectionItem(
-        id = "${Random.nextInt()}",
-        text = "${Random.nextInt()}",
-        author = "${Random.nextInt()}",
-        imageUrl = "${Random.nextInt()}"
-    )
 }
+
+internal fun item(): CollectionItem = CollectionItem(
+    id = "${Random.nextInt()}",
+    text = "${Random.nextInt()}",
+    author = "${Random.nextInt()}",
+    imageUrl = "${Random.nextInt()}"
+)
